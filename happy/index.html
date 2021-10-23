@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEART</title>
+
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        background-image: linear-gradient(to bottom, #ff9a9e, #fecfef);
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .heart {
+        position: relative;
+        width: 200px;
+        height: 170px;
+        margin: 10rem auto 5rem;
+        /*   background-color:blue; */
+      }
+
+      .heart::before,
+      .heart::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 160px;
+        background-color: red;
+        border-radius: 50px 50px 0 0;
+      }
+
+      .heart::before {
+        left: 100px;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      .heart::after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+
+      .text {
+        text-align: center;
+        font-size: 2.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heart"></div>
+
+      <div class="text">
+        <h2>I LOVE YOU</h2>
+      </div>
+    </div>
+  </body>
+</html>
